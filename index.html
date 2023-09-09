@@ -12,7 +12,9 @@
 
 <body>
 
-    <div class="container">
+    <!-- cv form  -->
+
+    <div class="container" id="cv-form">
         <h1 class="text-center my-3"> Resume Generator</h1>
         <p class="text-center"> Unlock your career potential with our user-friendly resume
             builder! Join us today and craft a
@@ -28,48 +30,146 @@
 
                     </input>
                 </div>
-                    <div class="form-group mt-2">
-                        <label for="namefield">your Contact</label>
-                        <input type="text" id="ContactField" placeholder="Enter here" class="form-control">
-                        </input>
-                    </div>
-                    <div class="form-group mt-2">
-                        <label for="namefield">your Address</label>
-                        <textarea
-                        id="ContactField"
-                        placeholder="Enter here" 
-                        class="form-control"></textarea>
-                    </div>
-             <p class="text-secondary my-3 ">Social links</p>
-             <div class="form-group mt-2">
-                 <label for="fbfield">Facebook</label>
-                 <input type="text" id="fbField" placeholder="Enter here" class="form-control">
-                </input>
-            </div>
-            <div class="form-group mt-2">
-                <label for="instaField">Instagram</label>
-                <input type=" text" id="instaField" placeholder="Enter here" class="form-control">
-            </input>
-        </div>
-        <div class="form-group mt-2">
-           <label for="linkedField">linkedIn</label>
-           <input type="text" id="linkedField" placeholder="Enter here" class="form-control">
-           </input>
-       </div>
+                <div class="form-group mt-2">
+                    <label for="namefield">your Contact</label>
+                    <input type="text" id="ContactField" placeholder="Enter here" class="form-control">
+                    </input>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="namefield">your Address</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5">
+                        </textarea>
+                </div>
+                <p class="text-secondary my-3 ">Social links</p>
+                <div class="form-group mt-2">
+                    <label for="fbfield">Facebook</label>
+                    <input type="text" id="fbField" placeholder="Enter here" class="form-control">
+                    </input>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="instaField">Instagram</label>
+                    <input type=" text" id="instaField" placeholder="Enter here" class="form-control">
+                    </input>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedField">linkedIn</label>
+                    <input type="text" id="linkedField" placeholder="Enter here" class="form-control">
+                    </input>
+                </div>
 
             </div>
 
             <!-- Second side of page -->
             <div class="col-md-6">
                 <h3>Professional information</h3>
-                
 
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="objectiveField" rows="5" class="form-control" placeholder="Enter here"></textarea>
+                </div>
+                <div class="form-group mt-2" id="we">
+                    <label for="professionlfield">Work Experience</label>
+
+                    <textarea rows="3" class="form-control weField" placeholder="Enter here"></textarea>
+                    <!-- new text area -->
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addnewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group mt-2" id="aq">
+                    <label for="professionlfield">Academic Qualification</label>
+                    <textarea rows="3" class="form-control eqField" placeholder="Enter here"></textarea>
+
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addnewAQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
         </div>
     </div>
 
 
+    <!-- cv template -->
 
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center  py-4 background">
+                <!-- FIRST COL  -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA6g9BWr61gs6KYIq3zjFEy36Z8OuOIJQ75A&usqp=CAU"
+                    alt="profile pic" class="img-fluid myimg" />
+
+
+                <div class="container">
+                    <p id="nameT1">Sukhpreet singh</p>
+                    <p id="contactT">+916398436397,8954790900</p>
+                    <p id="addressT">122/A b.p colony civil lines Rampur, U.P, INDIA</p>
+                    <hr />
+                    <p id="fbT" ><a href="">https://www.Facebook.com</a></p>
+                    <p id="instaT"><a href="">https://www.Instagram.com</a></p>
+                    <p id="linkedT"><a href="">https://www.linkedin.com</a></p>
+                </div>
+            </div>
+            <div class="col-md-8 py-4">
+                <!-- Second col  -->
+                <h1 id="nameT2" class="text-center" style="font-weight: 900;">Sukhpreet singh</h1>
+                <!-- objective card -->
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime sequi delectus adipisci
+                            iure, porro nisi eligendi! Nobis, enim atque molestias nesciunt culpa, dolore quibusdam
+                            assumenda provident id accusantium voluptates consequatur delectus tempora aspernatur
+                            quisquam.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- work Experience -->
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="weT">
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, deserunt.</li>
+                       
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, deserunt.</li>
+                       
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, deserunt.</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <!-- aqacedmic Qualification -->
+
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="aqT">
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, deserunt.</li>
+                       
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, deserunt.</li>
+                       
+                        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, deserunt.</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn background">Print</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"

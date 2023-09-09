@@ -1,2 +1,17 @@
-
+#cv-form{
+    /* display: none; */
+}
  
+#cv-template{
+    display: none;
+}
+.myimg{
+    margin-left: 10px;
+    width: 350px;
+    
+}
+
+.background{
+    background-color: bisque;
+
+}
