@@ -1,6 +1,13 @@
-#cv-form{
-    /* display: none; */
+*{
+    background-color: rgb(242, 242, 242);
 }
+
+ /* .carousel-item img{
+    padding-top:100px;
+    display: flex;
+    margin: 0 auto;
+   
+ } */
  
 #cv-template{
     display: none;

@@ -35,6 +35,19 @@ function addnewAQField(){
 }
 
 
+// Image work
+
+let imageField = document.getElementById("imagefield");
+var imageUrl="";
+imageField.addEventListener('change', (event) => {
+   const imageFile = event.target.files[0];
+   if (imageFile) {
+    imageUrl = URL.createObjectURL(imageFile);
+    document.getElementById("resultImage").src = imageUrl;
+   }
+ });
+
+
 
 // generating cv form 
 
@@ -42,6 +55,9 @@ function generateCV(){
     let nameField=document.getElementById("namefield").value;
     let nameT1=document.getElementById("nameT1");
 
+
+
+    // let n1=document.getElementById("nameT1");
 
     nameT1.innerHTML=nameField;
 
